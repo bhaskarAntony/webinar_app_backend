@@ -24,6 +24,18 @@ router.get('/list', async (req, res) => {
   }
 });
 
+//get user 
+app.get('/get-user', (req, res) => {
+  const couponCode = req.query.couponCode;
+  const user = userData.find((u) => u.couponCode === couponCode);
+
+  if (!user) {
+    res.status(404).json({ message: 'User not found' });
+  } else {
+    res.json(user);
+  }
+});
+
 router.delete('/delete/:userId', async (req, res) => {
     try {
       const influencerId = req.params.influencerId;
