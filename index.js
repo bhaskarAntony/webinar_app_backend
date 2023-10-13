@@ -18,9 +18,11 @@ app.use(bodyParser.json());
 // API routes
 const influencerRoutes = require('./routes/influencer');
 const userRoutes = require('./routes/users');
+const ConfirmedUserRoutes = require('./routes/confirmedUsers');
 
 app.use('/api/influencers', influencerRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/confirm', ConfirmedUserRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
