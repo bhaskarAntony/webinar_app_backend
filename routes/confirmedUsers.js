@@ -24,18 +24,18 @@ router.get('/all', async (req, res) => {
   }
 });
 
-// Get user by coupon code
-router.get('/get-user', async (req, res) => {
+// Get users by coupon code
+router.get('/get-users', async (req, res) => {
     const couponCode = req.query.couponCode;
     try {
-      const user = await User.findOne({ coupon: couponCode });
-      if (!user) {
-        res.status(404).json({ message: 'User not found' });
+      const users = await User.find({ coupon: couponCode });
+      if (users.length === 0) {
+        res.status(404).json({ message: 'No users found with this coupon code' });
       } else {
-        res.json(user);
+        res.json(users);
       }
     } catch (error) {
-      res.status(500).json({ error: 'Error finding the user check your internet connection' });
+      res.status(500).json({ error: 'Error finding users. Please check your internet connection' });
     }
   });
 
