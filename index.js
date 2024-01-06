@@ -20,11 +20,21 @@ const influencerRoutes = require('./routes/influencer');
 const userRoutes = require('./routes/users');
 const ConfirmedUserRoutes = require('./routes/confirmedUsers');
 const AttendeesRoutes = require('./routes/Attendees');
+const lmsRoutes = require('./routes/lms');
+const lmsuserRoutes = require('./routes/lmsuserRoute');
+const McqRoutes = require('./routes/TestRoute');
+const scoreRoutes = require('./routes/UserTestScore');
+const AssmentsRoutes = require('./routes/assessmentRoutes');
 
 app.use('/api/influencers', influencerRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/confirm', ConfirmedUserRoutes);
 app.use('/api/attendee', AttendeesRoutes);
+app.use('/api', lmsRoutes);
+app.use('/api', McqRoutes);
+app.use('/api', lmsuserRoutes);
+app.use('/api', scoreRoutes);
+app.use('/api', AssmentsRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
