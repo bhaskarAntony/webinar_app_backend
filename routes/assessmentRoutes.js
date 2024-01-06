@@ -40,7 +40,19 @@ router.get('/assessments/:id', async (req, res) => {
     }
  });
 
-
+ router.put('/update/ass/:id', async (req, res) => {
+    const assessmentId = req.params.id;
+    try {
+      const updatedAssessment = await User.findByIdAndUpdate(assessmentId, req.body, { new: true });
+      if (!updatedAssessment) {
+        return res.status(404).json({ message: "Assessment not found" });
+      }
+      res.status(200).json(updatedAssessment);
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: error.message });
+    }
+  });
 
 // Delete user by ID
 router.delete('/delete/ass/:Id', async (req, res) => {

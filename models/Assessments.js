@@ -19,27 +19,24 @@ const AssessmentSchema = new mongoose.Schema({
         required:true
     },
     
-    recordings:[
-        {
-            title:{
-                type:String,
-                required:true
-            },
-            description:{
-                type:String,
-                required:true
-            },
-            video:{
-                type:String,
-                required:true
-            },
-            pdfLink:{
-                type:String,
-                required:true
-            }
+    recordings: {
+        title:{
+            type:String,
+            required:true
+        },
+        description:{
+            type:String,
+            required:true
+        },
+        video:{
+            type:String,
+            required:true
+        },
+        pdfLink:{
+            type:String,
+            required:true
         }
-        
-    ],
+    },
     topic:{
         type:String,
         required:true
