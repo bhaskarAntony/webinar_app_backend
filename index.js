@@ -26,6 +26,7 @@ const McqRoutes = require('./routes/TestRoute');
 const scoreRoutes = require('./routes/UserTestScore');
 const AssmentsRoutes = require('./routes/assessmentRoutes');
 const DataScienceRoutes = require('./routes/DataScienceRoute')
+const CloudRoutes = require('./routes/CloudRouter')
 
 app.use('/api/influencers', influencerRoutes);
 app.use('/api/users', userRoutes);
@@ -37,6 +38,7 @@ app.use('/api', lmsuserRoutes);
 app.use('/api', scoreRoutes);
 app.use('/api', AssmentsRoutes);
 app.use('/api', DataScienceRoutes);
+app.use('/api', CloudRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
