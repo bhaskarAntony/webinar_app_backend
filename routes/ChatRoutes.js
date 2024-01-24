@@ -1,10 +1,10 @@
 // routes/user.js
 const express = require('express');
 const router = express.Router();
-const User = require('../models/Attendees'); // Assuming you have a User model
+const User = require('../models/Chat'); // Assuming you have a User model
 
 // Route to register a new user
-router.post('/add', async (req, res) => {
+router.post('/chat/add', async (req, res) => {
   try {
     const user = new User(req.body);
     await user.save();
@@ -14,8 +14,8 @@ router.post('/add', async (req, res) => {
   }
 });
 
-// Route to Cretrieve all registered users
-router.get('/all', async (req, res) => {
+// Route to retrieve all registered users
+router.get('/chat/all', async (req, res) => {
   try {
     const users = await User.find();
     res.json(users);
@@ -26,7 +26,7 @@ router.get('/all', async (req, res) => {
 
 
 // Delete user by ID
-router.delete('/delete/:userId', async (req, res) => {
+router.delete('/chat/delete/:Id', async (req, res) => {
   try {
     const userId = req.params.userId;
     const deletedUser = await User.findByIdAndDelete(userId);
