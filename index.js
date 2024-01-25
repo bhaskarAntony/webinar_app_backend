@@ -28,6 +28,7 @@ const AssmentsRoutes = require('./routes/assessmentRoutes');
 const DataScienceRoutes = require('./routes/DataScienceRoute')
 const CloudRoutes = require('./routes/CloudRouter')
 const ChatRoutes = require('./routes/ChatRoutes')
+const JavaRoutes = require('./routes/JavaRoutes')
 
 app.use('/api/influencers', influencerRoutes);
 app.use('/api/users', userRoutes);
@@ -41,6 +42,7 @@ app.use('/api', AssmentsRoutes);
 app.use('/api', DataScienceRoutes);
 app.use('/api', CloudRoutes);
 app.use('/api', ChatRoutes);
+app.use('/api', JavaRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
