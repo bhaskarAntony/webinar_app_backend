@@ -30,6 +30,7 @@ const CloudRoutes = require('./routes/CloudRouter')
 const ChatRoutes = require('./routes/ChatRoutes')
 const JavaRoutes = require('./routes/JavaRoutes')
 const JobRoutes = require('./routes/JobsRoutes')
+const AngularRoutes = require('./routes/AngularRoutes')
 
 app.use('/api/influencers', influencerRoutes);
 app.use('/api/users', userRoutes);
@@ -45,6 +46,7 @@ app.use('/api', CloudRoutes);
 app.use('/api', ChatRoutes);
 app.use('/api', JavaRoutes);
 app.use('/api', JobRoutes);
+app.use('/api', AngularRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
