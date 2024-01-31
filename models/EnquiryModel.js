@@ -9,11 +9,11 @@ const EnquirySchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    phone:{
+    mobile:{
         type:String,
         required:true
     },
-    education:{
+    qualification:{
         type:String,
         required:true
     },
@@ -22,6 +22,26 @@ const EnquirySchema = new mongoose.Schema({
         required:true
     },
     course:{
+        type:String,
+        required:true
+    },
+    gender:{
+        type:String,
+        required:true
+    },
+    dob:{
+        type:String,
+        required:true
+    },
+    Gmobile:{
+        type:String,
+        required:true
+    },
+    passing:{
+        type:String,
+        required:true
+    },
+    details:{
         type:String,
         required:true
     }
