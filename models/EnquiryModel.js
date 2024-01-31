@@ -46,4 +46,4 @@ const EnquirySchema = new mongoose.Schema({
         required:true
     }
 })
-module.exports = mongoose.model('enquiries', EnquirySchema);
+module.exports = mongoose.model('enquirie', EnquirySchema);
