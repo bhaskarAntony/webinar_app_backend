@@ -2,10 +2,6 @@
 const mongoose = require('mongoose');
 
 const LmsSchema = new mongoose.Schema({
-    companyName:{
-        type:String,
-        required:true
-    },
     jd:{
         type:String,
         required:true
@@ -14,11 +10,7 @@ const LmsSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    image:{
-        type:String,
-        required:true
-    },
-    role:{
+    title:{
         type:String,
         required:true
     },
@@ -26,10 +18,26 @@ const LmsSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    course:{
+    experience:{
         type:String,
         required:true
     },
+    openings:{
+        type:String,
+        required:true
+    },
+   companyName:{
+    type:String,
+    required:true
+   },
+   location:{
+    type:String,
+    required:true
+   },
+   bond:{
+    type:String,
+    required:true
+   },
     date:{
         type:Date,
         default:Date.now()

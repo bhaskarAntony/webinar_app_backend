@@ -31,6 +31,7 @@ const ChatRoutes = require('./routes/ChatRoutes')
 const JavaRoutes = require('./routes/JavaRoutes')
 const JobRoutes = require('./routes/JobsRoutes')
 const AngularRoutes = require('./routes/AngularRoutes')
+const EnquiryRoutes = require('./routes/EnquiryRoute')
 
 app.use('/api/influencers', influencerRoutes);
 app.use('/api/users', userRoutes);
@@ -47,6 +48,7 @@ app.use('/api', ChatRoutes);
 app.use('/api', JavaRoutes);
 app.use('/api', JobRoutes);
 app.use('/api', AngularRoutes);
+app.use('/api', EnquiryRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
