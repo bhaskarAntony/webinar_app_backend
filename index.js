@@ -35,7 +35,7 @@ const EnquiryRoutes = require('./routes/EnquiryRoute')
 const PythonRoutes = require('./routes/Python')
 
 app.use('/api/influencers', influencerRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api/mern', userRoutes);
 app.use('/api/confirm', ConfirmedUserRoutes);
 app.use('/api/attendee', AttendeesRoutes);
 app.use('/api', lmsRoutes);
