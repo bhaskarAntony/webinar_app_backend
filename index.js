@@ -33,6 +33,7 @@ const JobRoutes = require('./routes/JobsRoutes')
 const AngularRoutes = require('./routes/AngularRoutes')
 const EnquiryRoutes = require('./routes/EnquiryRoute')
 const PythonRoutes = require('./routes/Python')
+const awsRoutes = require('./routes/aws')
 
 app.use('/api/influencers', influencerRoutes);
 app.use('/api/mern', userRoutes);
@@ -51,6 +52,7 @@ app.use('/api', JobRoutes);
 app.use('/api', AngularRoutes);
 app.use('/api', EnquiryRoutes);
 app.use('/api', PythonRoutes);
+app.use('/api', awsRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
