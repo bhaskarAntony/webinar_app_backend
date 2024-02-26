@@ -5,7 +5,8 @@ const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   mobile: String,
-  coupon: String,
+  college: String,
+  year: String,
 });
 
 module.exports = mongoose.model('DataScienceUser', userSchema);
