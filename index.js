@@ -27,6 +27,7 @@ const scoreRoutes = require('./routes/UserTestScore');
 const AssmentsRoutes = require('./routes/assessmentRoutes');
 const DataScienceRoutes = require('./routes/DataScienceRoute')
 const CloudRoutes = require('./routes/CloudRouter')
+const TrialRoutes = require('./routes/courseFreeTrial')
 const ChatRoutes = require('./routes/ChatRoutes')
 const JavaRoutes = require('./routes/JavaRoutes')
 const JobRoutes = require('./routes/JobsRoutes')
@@ -53,6 +54,7 @@ app.use('/api', AngularRoutes);
 app.use('/api', EnquiryRoutes);
 app.use('/api', PythonRoutes);
 app.use('/api', awsRoutes);
+app.use('/api', TrialRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
