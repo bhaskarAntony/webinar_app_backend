@@ -6,7 +6,9 @@ const userSchema = new mongoose.Schema({
   email: String,
   mobile: String,
   course: String,
-  year:String
+  year:String,
+  aggr: String,
+  branch: String
 });
 
 module.exports = mongoose.model('college', userSchema);
