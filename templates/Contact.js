@@ -1,8 +1,10 @@
 // emailTemplates.js
 module.exports = {
-    registerUser: (name, email, subject, message) => `
-      <h2>Dear ${name},</h2>
-      <h4>Dear ${email},</h4>
+    registerUser: (name, email, mobile, subject, message) => `
+      <h2>Username ${name},</h2>
+      <hr>
+      <h4>Email ${email},</h4>
+      <h4>Mobile Number ${mobile},</h4>
       <p>Thank you for registering! We appreciate your interest in our course.</p>
       <p>message</p>
       <p>${message}</p>
