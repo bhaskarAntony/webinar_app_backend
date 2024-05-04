@@ -4,7 +4,7 @@ const router = express.Router();
 const User = require('../models/contact'); // Assuming you have a User model
 
 const nodemailer = require('nodemailer');
-const { registerUser } = require('../templates/COntact');
+const { registerUser } = require('../templates/Contact');
 
 // Create a transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
