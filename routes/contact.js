@@ -24,7 +24,7 @@ router.post('/contact', async (req, res) => {
     // Setup email data with unicode symbols
         let mailOptions = {
             from: req.body.Email, // sender address
-            to: 'bhaskarbabucm6@gmail.com', // list of receivers
+            to: 'rajeshwarirajeshwari34879@gmail.com', // list of receivers
             subject: req.body.Subject, // Subject line
             text: req.body.Message, // plain text body
             html: registerUser(req.body.Name, req.body.Email, req.body.Mobile, req.body.Subject, req.body.Message) // html body
