@@ -36,6 +36,7 @@ const EnquiryRoutes = require('./routes/EnquiryRoute')
 const PythonRoutes = require('./routes/Python')
 const awsRoutes = require('./routes/aws')
 const college = require('./routes/college')
+const contact = require('./routes/contact');
 
 app.use('/api/influencers', influencerRoutes);
 app.use('/api/mern', userRoutes);
@@ -57,6 +58,7 @@ app.use('/api', PythonRoutes);
 app.use('/api', awsRoutes);
 app.use('/api', TrialRoutes);
 app.use('/api', college);
+app.use('/api', contact);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
