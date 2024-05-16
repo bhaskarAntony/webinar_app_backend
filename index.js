@@ -37,6 +37,7 @@ const PythonRoutes = require('./routes/Python')
 const awsRoutes = require('./routes/aws')
 const college = require('./routes/college')
 const contact = require('./routes/contact');
+const isha = require('./routes/isha');
 
 app.use('/api/influencers', influencerRoutes);
 app.use('/api/mern', userRoutes);
@@ -59,6 +60,7 @@ app.use('/api', awsRoutes);
 app.use('/api', TrialRoutes);
 app.use('/api', college);
 app.use('/api', contact);
+app.use('/isha/api', isha);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
